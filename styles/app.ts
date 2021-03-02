@@ -36,7 +36,7 @@ export const settings = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 32,
-    backgroundColor: 'lemonchiffon',
+    // backgroundColor: 'lemonchiffon', // TESTING PURPOSE
   },
 
   title: {

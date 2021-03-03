@@ -18,7 +18,7 @@ const Settings = () => {
         showRGB: showRGB
       }));
       const settings = await AsyncStorage.getItem('colorSettings') || '';
-      console.log(JSON.parse(settings))
+      console.log('Settings saved:', JSON.parse(settings))
     } catch (e) {
       // saving error
       console.error('Shoot, something went wrong.')

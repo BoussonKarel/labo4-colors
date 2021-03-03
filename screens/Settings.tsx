@@ -8,9 +8,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { settings } from '../styles/app';
 
 const Settings = () => {
+  // Standaard true (als er niets is ingesteld / opgeslagen)
   const [showHex, setShowHex] = useState(true);
   const [showRGB, setShowRGB] = useState(true);
 
+  // Settings opslaan
   const saveSettings = async () => {
     try {
       await AsyncStorage.setItem('colorSettings', JSON.stringify({
@@ -25,6 +27,7 @@ const Settings = () => {
     }
   }
 
+  // Settings ophalen
   const restoreState = async () => {
     const settings = await AsyncStorage.getItem('colorSettings');
     if (settings) {
@@ -34,10 +37,12 @@ const Settings = () => {
     }
   }
 
+  // Elke keer als de pagina opent, de settings ophalen
   useEffect(() => {
     restoreState();
   }, []);
 
+  // Elke keer als ShowRGB of ShowHex aangepast worden, ze opslaan
   useEffect(() => {
     saveSettings();
   }, [showRGB, showHex]);

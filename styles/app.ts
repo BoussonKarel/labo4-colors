@@ -22,7 +22,7 @@ export const app = StyleSheet.create({
   description: {
     marginVertical: 16,
     fontStyle: 'italic',
-    opacity: .4,
+    opacity: .5,
   },
 
   settingsButton: {
@@ -30,6 +30,15 @@ export const app = StyleSheet.create({
     opacity: .8,
 
   },
+
+  growingCircle: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+  }
 });
 
 export const settings = StyleSheet.create({

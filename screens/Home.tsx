@@ -12,7 +12,7 @@ const Home = ({ navigation }: any) => {
   const [oldColor, setOldColor] : any = useState(generateRandomColor);
   const [position, setPosition] = useState({ x: undefined, y: undefined })
   const [scale, setScale] = useState(new Animated.Value(0));
-  const [textColor, setTextColor] = useState('');
+  const [textColor, setTextColor] = useState('black');
 
   const [fade] = useState(new Animated.Value(1));
   const [timeoutId, setTimeoutId] : any = useState();
